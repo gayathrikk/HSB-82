@@ -224,11 +224,10 @@ public class Goto_Bug {
 
 			System.out.println("FB 3 is not clicked");
 
-		}}	@Test(priority = 3)
+		}}	
+	  @Test(priority = 3)
 
-
-
-		public void Brain_Id() {
+	public void Brain_Id() {
 
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 
@@ -258,22 +257,15 @@ public class Goto_Bug {
 
 				String expectedT10 = "B_37_FB3-SL_417-ST_NISL-SE_1249_thumbnail.jpg";
 
-				Assert.assertEquals(expectedT10,Z);           
-
-				System.out.println("Assertion passed: " + Z + " matches the expected value.");
-
-			} catch (AssertionError e) {
-
-				System.out.println("Assertion failed: " + e.getMessage());
+				Assert.assertEquals(expectedT10, Z);
 
 			} catch (Exception e) {
 
-				System.out.println("An error occurred: " + e.getMessage());
+				e.printStackTrace();
 
 			}
 
 		}
-
 
 
 		@AfterTest
